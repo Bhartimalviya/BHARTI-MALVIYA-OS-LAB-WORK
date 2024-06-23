@@ -1,0 +1,71 @@
+vector search
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {2, 4, 6, 8, 10};
+    int searchElement = 6;
+    bool found = false;
+
+    for (int i = 0; i < vec.size(); ++i) {
+        if (vec[i] == searchElement) {
+            found = true;
+            break;
+        }
+    }
+
+    if (found) {
+        std::cout << "Element found in the vector." << std::endl;
+    } else {
+        std::cout << "Element not found in the vector." << std::endl;
+    }
+
+    return 0;
+}
+vector userdefined data type
+#include <iostream>
+#include <vector>
+using namespace std;
+
+struct Person {
+    string name;
+    int age;
+};
+
+int main() {
+    vector<Person> people;
+
+  Person p1 = {"bharti", 17};
+  Person p2 = {"reeta", 16};
+
+    people.push_back(p1);
+    people.push_back(p2);
+
+    for (size_t i = 0; i < people.size(); ++i) {
+        cout << "Person " << i + 1 << ": " << "Name: " << people[i].name << ", Age: " << people[i].age << endl;
+    }
+
+    return 0;
+}
+output:-Person 1: Name: bharti, Age: 17
+Person 2: Name: reeta, Age: 16
+vector intiliaze
+#include<iostream>
+#include<vector>
+using namespace std;
+int main() {
+	vector<int>myVector;
+	myVector.push_back(10);
+	myVector.push_back(20);
+	myVector.push_back(30);
+	
+	cout<<"element of the vector: ";
+	for (int i = 0; i<myVector.size();++i) {
+		cout<<myVector[i]<<" ";
+	}
+	cout<<endl;
+	return 0;
+}
+output:-
+element of the vector: 10 20 30
+
